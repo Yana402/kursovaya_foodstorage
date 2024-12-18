@@ -27,7 +27,7 @@
 
 .inputContainer input:hover,
 .inputContainer input:valid {
-  border-bottom-color: #FF9921;
+  border-bottom-color: red;
 }
 
 .inputContainer:hover label {

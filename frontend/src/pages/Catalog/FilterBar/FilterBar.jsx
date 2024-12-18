@@ -22,7 +22,6 @@ function FilterBar(props) {
       : `${filterField.upperBound}-${filterField.lowerBound}`;
 
   const handleFilterFieldChange = (value) => {
-    console.log(categories);
     const newSelectedField = filterFields.find(
       (field) => field.value === value
     );

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./index.module.css";
 import InputText from "../../../components/Inputs/InputText/InputText";
 
-function RightSideBar({
+function BottomSideBar({
   totalQuantity,
   totalPrice,
   totalWeight,
@@ -11,10 +11,10 @@ function RightSideBar({
   onOrderPlace,
 }) {
   return (
-    <div className={styles.rightSideBarContainer}>
-      <div className={styles.rightSideBar}>
-        <h3 className={styles.rightSideBar__caption}>Shopping cart</h3>
-        <p className={styles.rightSideBar__totalQuantity}>
+    <div className={styles.bottomSideBarContainer}>
+      <div className={styles.bottomSideBar}>
+        <h3 className={styles.bottomSideBar__caption}>Shopping cart</h3>
+        <p className={styles.bottomSideBar__totalQuantity}>
           {totalQuantity} items
         </p>
         <div>
@@ -35,7 +35,7 @@ function RightSideBar({
         />
         <button
           type="submit"
-          className={styles.rightSideBar__placeOrderButton}
+          className={styles.bottomSideBar__placeOrderButton}
           onClick={() => onOrderPlace()}
         >
           Place an order
@@ -46,4 +46,4 @@ function RightSideBar({
   );
 }
 
-export default RightSideBar;
+export default BottomSideBar;

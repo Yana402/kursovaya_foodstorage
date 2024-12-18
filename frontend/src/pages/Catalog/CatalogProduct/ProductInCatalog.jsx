@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./index.module.css";
 
 function CatalogProduct({ product }) {
-  const { id, name, price, weight, imageUrl } = product;
+  const { id, name, price, weight, imageUrl, description } = product;
   return (
     <a className={styles.productContainer}
       href={"/catalog/product/" + id}>
@@ -11,7 +11,7 @@ function CatalogProduct({ product }) {
         className={styles.product__imageContainer}
       >
         <img
-          src={imageUrl}
+          src={`${process.env.REACT_APP_IMAGE_PATH}/${imageUrl}`}
           className={styles.imageContainer__image}
           alt="food"
         />
@@ -22,6 +22,7 @@ function CatalogProduct({ product }) {
           <p className={styles.weightPriceContainer__weight}>{weight}g</p>
           <p className={styles.weightPriceContainer__price}>${price}</p>
         </div>
+        <p className={styles.detailsContainer__description}>{description}</p>
       </div>
       </div>
     </a>

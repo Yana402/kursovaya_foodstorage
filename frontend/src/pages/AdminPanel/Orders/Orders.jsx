@@ -227,7 +227,7 @@ function Orders() {
             )}
         </Modal>
       ) : (
-        <div className={styles.mainContainer__ordersSection}>
+        <div className={styles.ordersSection}>
           <FilterBar
             filterFields={FILTER_FIELDS}
             filterField={selectedFilterField}

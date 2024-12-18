@@ -20,5 +20,5 @@
 }
 
 .inputContainer select:hover {
-  border-color: #FF9921;
+  border-color: red;
 }

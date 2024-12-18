@@ -1,7 +1,7 @@
 .filterBar {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
   width: 100%;
@@ -11,10 +11,10 @@
 .filterBar__filterContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   margin-right: 10px;
   height: 100%;
+  width: 32%;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 10px;

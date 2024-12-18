@@ -24,11 +24,11 @@
 }
 
 .active {
-  border-color: #ff9921;
-  background-color: #ff9921;
+  border-color: red;
+  background-color: red;
   cursor: default;
 }
 
 .naviBar__button:hover {
-  border-color: #ff9921;
+  border-color: red;
 }

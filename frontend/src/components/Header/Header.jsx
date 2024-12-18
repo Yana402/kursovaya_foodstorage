@@ -35,22 +35,23 @@ function Navbar({ roles, isAuthenticated }) {
 
   return (
     <nav className={styles.navigationContainer} id="navi-top-bar">
-      <NavLink
-        to="/admin-panel/product-panel"
-        className={({ isActive }) =>
-          isActive || !isAdmin
-            ? styles["navigationItem--active"]
-            : styles.navigationItem
-        }
-        id="home-href"
-      >
+      <h1 className={styles.shopTitle}>FastFoodRestaurant</h1>
+      {isAdmin && (
+        <NavLink
+          to="/admin-panel/product-panel"
+          className={({ isActive }) =>
+            isActive ? styles["navigationItem--active"] : styles.navigationItem
+          }
+          id="home-href"
+        >
         <img
           src={adminIcon}
           className={styles["navigationItem__icon"]}
           alt="icon"
         />
         <p className={styles["navigationItem__text"]}>Admin panel</p>
-      </NavLink>
+        </NavLink>
+      )}
 
       <NavLink
         to="/catalog"
@@ -67,73 +68,71 @@ function Navbar({ roles, isAuthenticated }) {
         <p className={styles["navigationItem__text"]}>Catalog</p>
       </NavLink>
 
-      <NavLink
-        to="/cart"
-        className={({ isActive }) =>
-          isActive || isAdmin ? styles["navigationItem--active"] : styles.navigationItem
-        }
-        id="cart-href"
-      >
-        <img
-          src={cartIcon}
-          className={styles["navigationItem__icon"]}
-          alt="icon"
-        />
-        <p className={styles["navigationItem__text"]}>Cart</p>
-      </NavLink>
+      {isCustomer && (
+        <NavLink
+          to="/cart"
+          className={({ isActive }) =>
+            isActive ? styles["navigationItem--active"] : styles.navigationItem
+          }
+          id="cart-href"
+        >
+          <img
+            src={cartIcon}
+            className={styles["navigationItem__icon"]}
+            alt="icon"
+          />
+          <p className={styles["navigationItem__text"]}>Cart</p>
+        </NavLink>
+      )}
 
-      <h1 className={styles.shopTitle}>FastFoodRestaurant</h1>
+      {!isCustomer && !isAdmin && (
+        <NavLink
+          to="/sign-in"
+          className={({ isActive }) => isActive ? styles["navigationItem--active"] : styles.navigationItem}
+          id="sign-in-href"
+        >
+          <img
+            src={signInIcon}
+            className={styles["navigationItem__icon"]}
+            alt="icon"
+          />
+          <p className={styles["navigationItem__text"]}>Sign in</p>
+        </NavLink>
+      )}
 
-      <NavLink
-        to="/sign-in"
-        className={({ isActive }) =>
-          isActive || isAdmin || isCustomer
-            ? styles["navigationItem--active"]
-            : styles.navigationItem
-        }
-        id="sign-in-href"
-      >
-        <img
-          src={signInIcon}
-          className={styles["navigationItem__icon"]}
-          alt="icon"
-        />
-        <p className={styles["navigationItem__text"]}>Sign in</p>
-      </NavLink>
+      {isCustomer && (
+        <NavLink
+          to="/orders"
+          className={({ isActive }) =>
+            isActive ? styles["navigationItem--active"] : styles.navigationItem
+          }
+          id="user-profile-href"
+        >
+          <img
+            src={orderIcon}
+            className={styles["navigationItem__icon"]}
+            alt="icon"
+          />
+          <p className={styles["navigationItem__text"]}>Orders</p>
+        </NavLink>
+      )}
 
-      <NavLink
-        to="/orders"
-        className={({ isActive }) =>
-          isActive || isAdmin
-            ? styles["navigationItem--active"]
-            : styles.navigationItem
-        }
-        id="user-profile-href"
-      >
-        <img
-          src={orderIcon}
-          className={styles["navigationItem__icon"]}
-          alt="icon"
-        />
-        <p className={styles["navigationItem__text"]}>Orders</p>
-      </NavLink>
-
-      <NavLink
-        to="/sign-out"
-        className={({ isActive }) =>
-          isActive || !(isAdmin || isCustomer)
-            ? styles["navigationItem--active"]
-            : styles.navigationItem
-        }
-        id="sign-out-href"
-      >
-        <img
-          src={signOutIcon}
-          className={styles["navigationItem__icon"]}
-          alt="icon"
-        />
-        <p className={styles["navigationItem__text"]}>Sign out</p>
-      </NavLink>
+      {(isAdmin || isCustomer) && (
+        <NavLink
+          to="/sign-out"
+          className={({ isActive }) =>
+            isActive ? styles["navigationItem--active"] : styles.navigationItem
+          }
+          id="sign-out-href"
+        >
+          <img
+            src={signOutIcon}
+            className={styles["navigationItem__icon"]}
+            alt="icon"
+          />
+          <p className={styles["navigationItem__text"]}>Sign out</p>
+        </NavLink>
+      )}
     </nav>
   );
 }

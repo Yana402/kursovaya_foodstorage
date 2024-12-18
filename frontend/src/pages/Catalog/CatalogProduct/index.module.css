@@ -19,8 +19,8 @@
 }
 
 .productContainer:hover {
-  border-color: #FF9921;
-  background-color: #FF9921;
+  border-color: red;
+  background-color: red;
   .weightPriceContainer__price {
     color: white;
   }
@@ -72,8 +72,14 @@
 
 .weightPriceContainer__price {
   font-size: 20px;
-  color: #FF9921;
+  color: red;
   font-weight: bold;
   margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.detailsContainer__description {
+  font-size: 20px;
+  margin-top: 0px;
   margin-bottom: 0px;
 }

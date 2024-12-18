@@ -88,7 +88,6 @@ function Catalog() {
   };
 
   const handleSelectedCategoryChange = (newSelectedCategory) => {
-    console.log("YES");
     setProductPageRequest((prevState) => {
       const newRequest = { ...prevState };
       if (newSelectedCategory.id === 0) {
@@ -156,7 +155,6 @@ function Catalog() {
   return (
     <div className={styles.main__mainContainer}>
       <div className={styles.mainContainer__catalog}>
-        <p className={styles.catalog__caption}>MENU</p>
         <FilterBar
           filterFields={FILTER_FIELDS}
           filterField={selectedFilterField}
@@ -167,6 +165,7 @@ function Catalog() {
           onOrderChange={handleOrderChange}
           onCategoryChange={handleSelectedCategoryChange}
         />
+        <p className={styles.catalog__caption}>MENU</p>
         <div className={styles.catalog__items}>
           {products.map((item) => (
             <CatalogProduct key={item.id} product={item} />

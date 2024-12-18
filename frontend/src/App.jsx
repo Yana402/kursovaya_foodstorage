@@ -1,7 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import Catalog from "./pages/Catalog/Catalog";
 import ProductCard from "./pages/ProductCard/ProductCard";
 import Cart from "./pages/Cart/Cart";
@@ -29,7 +28,6 @@ function App() {
             <Route path="/sign-out" element={<SignOut />} />
             <Route path="/admin-panel/*" element={<AdminPanel />} />
           </Routes>
-          <Footer />
         </div>
       </BrowserRouter>
     </AuthProvider>

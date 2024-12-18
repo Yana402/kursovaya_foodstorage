@@ -1,10 +1,10 @@
 .main__mainContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   max-width: 100vw;
   min-width: 100vw;
-  min-height: 595px;
 }
 
 .message {
@@ -24,9 +24,8 @@
   flex-direction: column;
   justify-content: flex-start;
   height: fit-content;
-  width: 70%;
+  width: 50%;
   height: 100%;
   margin: 20px;
-  margin-left: 500px;
   padding: 0;
 }

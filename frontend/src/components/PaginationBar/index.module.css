@@ -39,14 +39,14 @@
   font-size: 20px;
   font-weight: bold;
   border: none;
-  background-color: #ff9921;
+  background-color: red;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   cursor: default;
 }
 
 .pageSelectionBar__button:hover {
-  border-color: #ff9921;
+  border-color: red;
 }
 
 .totalCount {

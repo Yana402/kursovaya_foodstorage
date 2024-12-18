@@ -14,13 +14,13 @@ spring:
         default_schema: public
         dialect: org.hibernate.dialect.PostgreSQLDialect
   mail:
-    host: ${MAIL_HOST}
-    port: ${MAIL_PORT}
-    username: ${MAIL_USERNAME}
-    password: ${MAIL_PASSWORD}
+    host: ${MAIL_HOST:smtp.mailersend.net}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:MS_Vi9JUc@trial-0p7kx4xy9xel9yjr.mlsender.net}
+    password: ${MAIL_PASSWORD:mmT7k8zw0XGXNSZm}
     protocol: smtp
-    sender-email: ${MAIL_SENDER_EMAIL}
-    sender-name: ${MAIL_SENDER_NAME}
+    sender-email: ${MAIL_SENDER_EMAIL:no-reply@trial-0p7kx4xy9xel9yjr.mlsender.net}
+    sender-name: ${MAIL_SENDER_NAME:FastFoodRestaurant}
     properties:
       mail:
         smtp:

@@ -13,14 +13,18 @@ code {
 }
 
 div {
-  font-family: sans-serif;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   transition: 0.5s ease-out;
   box-sizing: border-box;
 }
 
 a {
-  font-family: sans-serif;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   transition: 0.5s;
   text-decoration: none;
   color: black;
+}
+
+* {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }

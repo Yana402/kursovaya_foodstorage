@@ -1,7 +1,7 @@
 header {
   max-width: 100%;
   min-width: 100%;
-  background-color: #000000;
+  background-color: grey;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -14,9 +14,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
   padding: 5px;
-  height: 40px;
+  height: 100px;
   width: 70%;
 }
 
@@ -27,10 +28,13 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 80%;
   width: fit-content;
   text-align: center;
   text-decoration: none;
+  p {
+    font-size: 20px;
+  }
 }
 
 .navigationItem:hover {
@@ -39,17 +43,21 @@ header {
 
 .navigationItem--active {
   pointer-events: none;
+  cursor: default;
   margin-left: 10px;
   margin-right: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 80%;
   width: fit-content;
   text-align: center;
+  text-decoration: none;
   opacity: 0.4;
-  cursor: default;
+  p {
+    font-size: 20px;
+  }
 }
 
 .navigationItem__icon {
@@ -63,13 +71,11 @@ header {
 }
 
 .shopTitle {
-  color: #FF9921;
+  color: red;
   transition: 1s ease-out;
   font-size: 28px;
-  margin: 0;
   margin-left: 20px;
   margin-right: 20px;
-  height: 30px;
   text-align: center;
   font-weight: bold;
 }

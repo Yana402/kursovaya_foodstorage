@@ -32,8 +32,8 @@
 .signUpForm button {
   width: 40%;
   margin-top: 20px;
-  background-color: #ff9921;
-  border: 2px solid #ff9921;
+  background-color: red;
+  border: 2px solid red;
   border-radius: 10px;
   font-size: 20px;
   color: #ffffff;

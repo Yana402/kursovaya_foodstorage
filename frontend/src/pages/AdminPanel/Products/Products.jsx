@@ -69,7 +69,7 @@ function Products() {
   );
   const [productPageRequest, setProductPageRequest] = useState({
     offset: 0,
-    limit: 3,
+    limit: 5,
     sortBy: selectedFilterField.value,
     sortOrder: selectedSortOrder,
   });

@@ -14,14 +14,18 @@ function Product({ product, handleEdit }) {
         className={styles.product__imageContainer}
         href={"/catalog/product/" + id}
       >
-        <img className={styles.product__image} src={imageUrl} alt="food" />
+        <img className={styles.product__image} src={`${process.env.REACT_APP_IMAGE_PATH}/${imageUrl}`} alt="food" />
       </a>
-      <p className={styles.product__id}>{id}</p>
       <p className={styles.product__name}>{name}</p>
-      <p className={styles.product__weight}>g{weight}</p>
       <p className={styles.product__description}>{description}</p>
-      <p className={styles.product__price}>${price}</p>
-      <p className={styles.product__categoryId}>category: {categoryId}</p>
+      <div className={styles.idCategoryContainer}>
+        <p className={styles.product__id}>id: {id}</p>
+        <p className={styles.product__categoryId}>category: {categoryId}</p>
+      </div>
+      <div className={styles.weightPriceContainer}>
+        <p className={styles.weightPriceContainer__weight}>g{weight}</p>
+        <p className={styles.weightPriceContainer__price}>${price}</p>
+      </div>
       <div className={styles.buttonContainer}>
         <img
           className={styles.buttonContainer__icon}

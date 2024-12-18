@@ -12,7 +12,7 @@
 }
 
 .item:hover {
-  background-color: #ff9921;
+  background-color: red;
   p {
     color: #ffffff;
   }

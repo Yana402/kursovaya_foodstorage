@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import axios from "axios";
 import CartItem from "./CartItem/CartItem";
-import RightSideBar from "./RightSideBar/RightSideBar";
 import Modal from "../../components/Modal/Modal";
+import BottomSideBar from "./BottomSideBar/RightSideBar";
 
 const MESSAGES = {
   EMPTY_CART: "You have no items in cart. Go to catalog and order something.",
@@ -85,6 +85,7 @@ function Cart() {
         }
       );
       setMessage(MESSAGES.ORDER_SUCCESSFULLY_PLACED);
+      setCart(null);
       openModalWithMessage();
     } catch (error) {
       console.error("Failed to place order", error);
@@ -202,7 +203,7 @@ function Cart() {
               />
             ))}
           </ul>
-          <RightSideBar
+          <BottomSideBar
             totalQuantity={totalQuantity}
             totalPrice={totalPrice}
             totalWeight={totalWeight}
